@@ -3,12 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vk</title>
+    <title>Teamway – Build your dream team today</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <main>
-      <button type="button" disabled>It works</button>
-    </main>
+    <div class="page">
+      <!-- Header -->
+      <header class="nav">
+        <a href="#" class="logo" aria-label="VK home">
+          <img class="logo__mark" src="/vk-logo.webp" alt="VK" width="2000" height="990" />
+        </a>
+        <nav class="nav__links" aria-label="Main">
+          <a href="#">Companies</a>
+          <a href="#">Members</a>
+          <a href="#">Society</a>
+          <a href="#">About</a>
+          <a href="#">Login</a>
+        </nav>
+        <a href="#" class="btn btn--dark nav__cta">Hire talent</a>
+      </header>
+
+      <!-- Hero -->
+      <main class="hero">
+        <section class="hero__intro">
+          <h1>Build your<br />dream team<br />today.</h1>
+
+          <div class="hero__bottom">
+            <p>
+              Unlock success with our handpicked dream team of experts. Hire now for unparalleled
+              results.
+            </p>
+            <div class="hero__actions">
+              <a href="#" class="btn btn--dark btn--call">
+                <span>Hiring? Book a call</span>
+                <span class="btn__arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" /></svg>
+                </span>
+              </a>
+              <div class="avatars">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=faces" alt="" />
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=96&h=96&fit=crop&crop=faces" alt="" />
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=96&h=96&fit=crop&crop=faces" alt="" />
+                <span class="avatars__more">+728</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bento" aria-label="Talent highlights">
+          <div class="bento__col bento__col--1">
+            <figure class="tile tile--photo tile--tall">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=760&fit=crop&crop=faces" alt="Project preview" />
+            </figure>
+            <article class="tile tile--purple tile--short">
+              <h2>Remote Talent<br />Pool</h2>
+              <p>
+                Pre-vetted remote developers, designers, and product managers with world-class
+                technical and communication skills
+              </p>
+            </article>
+          </div>
+
+          <div class="bento__col bento__col--2">
+            <article class="tile tile--green">
+              <h2>Quick<br />and adaptable</h2>
+              <p>
+                Hire within a mere 72 hours. Easily adjust your team size from month to month as
+                required.
+              </p>
+            </article>
+            <figure class="tile tile--photo">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=640&fit=crop&crop=faces" alt="Project preview" />
+            </figure>
+          </div>
+
+          <div class="bento__col bento__col--3">
+            <figure class="tile tile--photo tile--short">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop&crop=faces" alt="Project preview" />
+            </figure>
+            <article class="tile tile--orange tile--tall">
+              <p>Rest assured, there are no crazy fees or legal hassle to worry about.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <!-- Trusted by -->
+      <p class="trusted">Join 150+ companies trusting Teamway for their remote engineering needs.</p>
+
+      <section class="logos" aria-label="Customers">
+        <span class="logo-item logo-item--open">&amp;Open</span>
+
+        <span class="logo-item logo-item--unisport">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 2h6v10a2 2 0 0 0 4 0V2h6v10a8 8 0 0 1-16 0Z" /></svg>
+          unisport
+        </span>
+
+        <span class="logo-item logo-item--aller">Aller</span>
+
+        <span class="logo-item logo-item--verisure">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 1 22.5 8.6l-4 12.4h-13l-4-12.4Z" />
+            <circle cx="12" cy="12.5" r="4" fill="#f9f7f4" />
+          </svg>
+          verisure
+        </span>
+
+        <span class="logo-item logo-item--layerise">
+          <svg viewBox="0 0 20 28" aria-hidden="true"><path d="M12 0 1 16h7l-2 12 13-17h-7.5Z" /></svg>
+          Layerise
+        </span>
+
+        <span class="logo-item logo-item--gamerpay">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill-rule="evenodd"
+              d="M7 1h10a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H7a6 6 0 0 1-6-6V7a6 6 0 0 1 6-6Zm1 5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4.5h-6V14h3v1H9V9h9V6Z"
+            />
+          </svg>
+          GamerPay
+        </span>
+
+        <span class="logo-item logo-item--bc">
+          <span class="bc__mark" aria-hidden="true"><span>BC</span></span>
+          <span class="bc__text">BETTER<br />COLLECTIVE</span>
+        </span>
+      </section>
+    </div>
   </body>
 </html>
