@@ -74,8 +74,9 @@
 
 .article-row h2 {
   margin-bottom: var(--spacing-xs);
-  font-size: var(--text-display-md);
-  line-height: var(--leading-display-md);
+  font-size: var(--text-heading-md);
+  font-weight: 500;
+  line-height: var(--leading-heading-md);
 }
 
 .article-row a:hover h2 {
@@ -119,10 +120,5 @@
   .article-row {
     grid-template-columns: 1fr;
     gap: var(--spacing-xs);
-  }
-
-  .article-row h2 {
-    font-size: var(--text-display-sm);
-    line-height: var(--leading-display-sm);
   }
 }

@@ -36,8 +36,9 @@
 }
 
 .case-section > h2 {
-  font-size: var(--text-display-md);
-  line-height: var(--leading-display-md);
+  font-size: var(--text-heading-md);
+  font-weight: 500;
+  line-height: var(--leading-heading-md);
 }
 
 .case-section__body {
@@ -98,11 +99,9 @@
 
 .next-project strong {
   display: block;
-  font-family: var(--font-display);
-  font-optical-sizing: none;
-  font-size: var(--text-display-md);
-  font-weight: 400;
-  line-height: var(--leading-display-md);
+  font-size: var(--text-heading-md);
+  font-weight: 500;
+  line-height: var(--leading-heading-md);
 }
 
 @media (max-width: 1024px) {
@@ -128,5 +127,53 @@
   .next-project {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* Product recordings, inset over a painted backdrop. The window sits slightly above centre. */
+
+.media-stage {
+  position: relative;
+  aspect-ratio: 2000 / 1119;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-paper);
+  background-position: center;
+  background-size: cover;
+}
+
+.media-stage video {
+  position: absolute;
+  top: 11.8%;
+  left: 11.45%;
+  width: 77.1%;
+  height: auto;
+}
+
+.media-stage--ingrid {
+  background-image: url("/images/work/ingrid-backdrop.webp");
+}
+
+/* Small stages give the window more of the frame so the product stays readable */
+.media-stage--card {
+  aspect-ratio: 4 / 3;
+  margin-bottom: var(--spacing-base);
+}
+
+.media-stage--card video {
+  top: 18.5%;
+  left: 8%;
+  width: 84%;
+}
+
+@media (max-width: 760px) {
+  .media-stage {
+    aspect-ratio: 4 / 3;
+  }
+
+  .media-stage video {
+    top: 18.5%;
+    left: 8%;
+    width: 84%;
   }
 }

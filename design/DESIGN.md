@@ -66,21 +66,23 @@ Both families are the closest free matches found by comparing candidates against
 ### 'Source Serif 4', Georgia, serif · `--font-display`
 - **Weight:** 400
 - **Optical sizing:** turn off with `font-optical-sizing: none`. The automatic display cut is much narrower and more contrasted than the mockup
-- **Role:** Headlines only
+- **Letter spacing:** -2% (`--tracking-display`), on every serif title
+- **Role:** Big, important titles only: page titles, section titles and the closing call to action. Everything smaller uses Work Sans
 
 ### 'Work Sans', system-ui, sans-serif · `--font-ui`
 - **Weights:** 400, 500
-- **Role:** Navigation, buttons, body, captions
+- **Role:** The default for everything else, including card titles, testimonials, stats, article titles and subheadings
 
 ### Type Scale
 
 | Role | Font | Size | Line Height | Letter Spacing | Source | Token |
 |---|---|---|---|---|---|---|
-| display-mega | display | 70px | 1.08 | 0 | measured | `--text-display-mega` |
-| display-xl | display | 48px | 1.12 | 0 | derived | `--text-display-xl` |
-| display-lg | display | 36px | 1.17 | 0 | derived | `--text-display-lg` |
-| display-md | display | 32px | 1.2 | 0 | derived | `--text-display-md` |
-| display-sm | display | 24px | 1.25 | 0 | derived | `--text-display-sm` |
+| display-mega | display | 70px | 1.08 | -2% | measured | `--text-display-mega` |
+| display-xl | display | 48px | 1.12 | -2% | derived | `--text-display-xl` |
+| display-lg | display | 36px | 1.17 | -2% | derived | `--text-display-lg` |
+| heading-xl | ui 400 | 48px | 1.12 | 0 | derived | `--text-heading-xl` |
+| heading-lg | ui 400 | 32px | 1.2 | 0 | derived | `--text-heading-lg` |
+| heading-md | ui 500 | 24px | 1.25 | 0 | derived | `--text-heading-md` |
 | title-md | ui 500 | 20px | 1.35 | 0 | derived | `--text-title-md` |
 | title-sm | ui 500 | 18px | 1.44 | 0 | derived | `--text-title-sm` |
 | body-md | ui 400 | 16px | 1.5 | 0 | derived | `--text-body-md` |
@@ -191,10 +193,10 @@ These were designed to extend the home page style across the full site.
 
 - **section heading:** `{typography.display-xl}`, two-tone. `{typography.display-lg}` on phones
 - **interior page hero:** centred, `{typography.display-mega}`, two-tone. Legal pages and articles use `{typography.display-xl}`
-- **feature tile:** `{colors.surface-paper}` fill, `{rounded.md}`, 32px padding, `{typography.display-md}` title
-- **stat:** 1px `{colors.hairline}` top rule, `{typography.display-xl}` value, `{typography.caption}` label in `{colors.muted}`
+- **feature tile:** `{colors.surface-paper}` fill, `{rounded.md}`, 32px padding, `{typography.heading-md}` title
+- **stat:** 1px `{colors.hairline}` top rule, `{typography.heading-xl}` value, `{typography.caption}` label in `{colors.muted}`
 - **process step:** 1px `{colors.ink}` top rule, numbered, `{typography.title-md}` title
-- **testimonial:** `{colors.surface-paper}` fill, `{rounded.md}`, `{typography.display-lg}` quote
+- **testimonial:** `{colors.surface-paper}` fill, `{rounded.md}`, `{typography.heading-lg}` quote
 - **FAQ:** native disclosure rows split by `{colors.hairline}`, `{typography.title-sm}` question
 - **CTA band:** `{colors.surface-dark}` fill, `{rounded.md}`, `{typography.display-xl}`, with white filled and white outline buttons
 - **image placeholder:** `{colors.surface-paper}` fill or `{colors.surface-dark}` for dark images, `{rounded.md}`, caption text
@@ -225,6 +227,11 @@ Full-bleed repeating pixel motifs built from the VK arrow shape, using stone, sa
 ### Product screens
 Real interfaces shown in context: on a dark `{colors.surface-dark}` frame or over a satellite photograph. The product UI inside an image keeps its own styling and does not need to follow these tokens.
 
+### Product recordings
+Use muted, looping video instead of GIF, as WebM with an MP4 fallback and a still poster. A recording plays only while on screen, and shows the poster with controls for people who prefer reduced motion.
+
+Show a recording inset over a full-bleed backdrop chosen for the project, with no border or shadow on the window. The window takes 77% of the stage width, 11.8% from the top, leaving slightly more backdrop below than above. In small spaces, use a 4:3 stage with the window at 84% of the width.
+
 ## Do's and Don'ts
 
 ### Do
@@ -233,6 +240,7 @@ Real interfaces shown in context: on a dark `{colors.surface-dark}` frame or ove
 - Split hero headlines into slate and ink.
 - Match tile backgrounds to the image's own background.
 - Mix pixel art and product screens in the mosaic.
+- Default to Work Sans, and save the serif for big, important titles.
 
 ### Don't
 - Don't use pill buttons, gradient orbs or atmospheric gradients.
@@ -255,7 +263,7 @@ The mockup is desktop only, so this section is derived.
 |---|---|---|
 | Canvas | Neutral `#f5f5f5` | Warm `#f5f3f1` |
 | Ink | Warm `#0c0a09` | Cool `#0f151d` |
-| Display type | Licensed face, weight 300 | Source Serif 4, weight 400, two-tone |
+| Display type | Licensed face, weight 300 | Source Serif 4, weight 400, -2% spacing, two-tone, big titles only |
 | UI type | Inter | Work Sans |
 | Buttons | Pills, 40px | Soft rectangles, 44px and 38px |
 | Colour source | Pastel gradient orbs | Pixel art and product imagery |

@@ -25,7 +25,6 @@
 .footer__label {
   margin-bottom: var(--spacing-base);
   color: var(--color-muted);
-  font-family: var(--font-ui);
   font-size: var(--text-caption);
   line-height: var(--leading-caption);
 }

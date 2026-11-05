@@ -9,6 +9,7 @@ const pages = {
   home: "index.html",
   work: "work/index.html",
   project: "work/sample-project/index.html",
+  ingrid: "work/ingrid/index.html",
   about: "about/index.html",
   thinking: "thinking/index.html",
   article: "thinking/sample-article/index.html",

@@ -46,9 +46,17 @@ address {
 
 h1,
 h2 {
+  font-weight: 400;
+}
+
+/* The only place the serif is set: page titles, big section titles and the closing CTA */
+h1,
+.section-head h2,
+.faq h2,
+.cta-band h2 {
   font-family: var(--font-display);
   font-optical-sizing: none;
-  font-weight: 400;
+  letter-spacing: var(--tracking-display);
 }
 
 h3 {
