@@ -186,10 +186,31 @@ Buttons are never pills.
 - **overflow:** hidden, with no border or shadow
 - **background:** matches the image's own background, so artwork blends into the tile
 
-### Inherited, not yet in the mockup (derived)
-- **text input:** `{colors.surface-card}` fill, 1px `{colors.hairline}` border, `{rounded.md}`, 44px tall
-- **badge:** `{colors.surface-paper}` fill, `{typography.caption}`, `{rounded.sm}`
-- **footer:** `{colors.canvas}` fill, `{colors.body}` text, `{typography.body-sm}`
+### Site components, beyond the mockup (derived)
+These were designed to extend the home page style across the full site.
+
+- **section heading:** `{typography.display-xl}`, two-tone. `{typography.display-lg}` on phones
+- **interior page hero:** centred, `{typography.display-mega}`, two-tone. Legal pages and articles use `{typography.display-xl}`
+- **feature tile:** `{colors.surface-paper}` fill, `{rounded.md}`, 32px padding, `{typography.display-md}` title
+- **stat:** 1px `{colors.hairline}` top rule, `{typography.display-xl}` value, `{typography.caption}` label in `{colors.muted}`
+- **process step:** 1px `{colors.ink}` top rule, numbered, `{typography.title-md}` title
+- **testimonial:** `{colors.surface-paper}` fill, `{rounded.md}`, `{typography.display-lg}` quote
+- **FAQ:** native disclosure rows split by `{colors.hairline}`, `{typography.title-sm}` question
+- **CTA band:** `{colors.surface-dark}` fill, `{rounded.md}`, `{typography.display-xl}`, with white filled and white outline buttons
+- **image placeholder:** `{colors.surface-paper}` fill or `{colors.surface-dark}` for dark images, `{rounded.md}`, caption text
+- **text input:** `{colors.surface-card}` fill, 1px `{colors.hairline}` border, `{rounded.md}`, at least 44px tall. Errors use `{colors.semantic-error}`
+- **cookie banner:** `{colors.surface-card}` fill, fixed to the lower right. Accept and Reject must have the same size and style
+- **footer:** `{colors.canvas}` fill, 1px `{colors.hairline}` top rule, `{colors.body}` text, `{typography.body-sm}`
+
+### Loading states (derived)
+- **page navigation:** 2px `{colors.ink}` progress bar across the top of the window
+- **image tiles:** `{colors.surface-paper}` pulse until the image loads, then a short fade in
+- **lists:** `{colors.surface-paper}` skeleton shapes matching the content that is loading
+- **buttons:** spinner beside the label with `aria-busy`, and the button keeps its size
+- **motion:** pulses and the progress animation stop for people who prefer reduced motion
+
+### Placeholder content
+Anything in `[square brackets]` must be replaced before launch. Testimonials, client names and results stay bracketed until real ones exist, so nothing invented can go live.
 
 ## Imagery
 

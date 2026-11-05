@@ -1,0 +1,103 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes page-progress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(0.85);
+  }
+}
+
+/* Page navigation */
+
+.page-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 40;
+  height: 2px;
+  background: var(--color-ink);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.page-progress.is-active {
+  animation: page-progress 2s cubic-bezier(0.1, 0.7, 0.2, 1) forwards;
+}
+
+/* Skeletons */
+
+.skeleton {
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-paper);
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+.skeleton--media {
+  aspect-ratio: 4 / 3;
+  margin-bottom: var(--spacing-base);
+  border-radius: var(--radius-md);
+}
+
+.skeleton--line {
+  height: 14px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.skeleton--short {
+  width: 40%;
+}
+
+.skeleton--title {
+  width: 70%;
+  height: 32px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.skeleton-row {
+  display: grid;
+  padding-block: var(--spacing-xl);
+  border-top: 1px solid var(--color-hairline);
+}
+
+/* Image tiles */
+
+.tile img {
+  transition: opacity 0.25s ease;
+}
+
+.tile.is-loading {
+  background: var(--color-surface-paper);
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+.tile.is-loading img {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton,
+  .tile.is-loading,
+  .page-progress.is-active {
+    animation: none;
+  }
+
+  .page-progress.is-active {
+    transform: scaleX(0.85);
+  }
+
+  .btn[aria-busy="true"]::before {
+    animation-duration: 2s;
+  }
+}

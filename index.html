@@ -4,28 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VK – Your agent-ready product ecosystem</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400&family=Work+Sans:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/src/styles/main.css" />
+    <meta name="description" content="VK creates, adapts and redesigns digital products with composable design architecture that stays modular, flexible and scalable long after launch." />
+    <!-- @include head -->
   </head>
   <body>
-    <header class="nav">
-      <a href="/" class="nav__logo" aria-label="VK home">
-        <img src="/vk-logo.webp" alt="VK" width="2000" height="990" />
-      </a>
-      <nav class="nav__links" aria-label="Main">
-        <a href="#">Work</a>
-        <a href="#">About</a>
-        <a href="#">Our Thinking</a>
-      </nav>
-      <a href="#" class="btn btn--primary btn--small">Lets Talk</a>
-    </header>
+    <!-- @include header -->
 
-    <main>
+    <main id="main">
       <section class="hero container">
         <h1 class="hero__title">
           <span class="hero__title-setup">Your agent-ready product ecosystem,</span>
@@ -36,14 +21,14 @@
           </span>
         </h1>
         <div class="hero__actions">
-          <a href="#" class="btn btn--primary">Lets Talk</a>
-          <a href="#" class="btn btn--outline">See Our Full Work</a>
+          <a href="/contact/" class="btn btn--primary">Lets Talk</a>
+          <a href="/work/" class="btn btn--outline">See Our Full Work</a>
         </div>
       </section>
 
       <section class="mosaic container" aria-label="Selected work">
         <div class="mosaic__grid">
-          <a href="#" class="tile tile--characters">
+          <a href="/work/sample-project/" class="tile tile--characters">
             <img
               src="/images/work/pixel-characters.png"
               alt="Four pixel-art characters with eyes: a heart, a star, a pushpin and a rounded blob"
@@ -51,7 +36,7 @@
               height="1062"
             />
           </a>
-          <a href="#" class="tile tile--harvester">
+          <a href="/work/sample-project/" class="tile tile--harvester">
             <img
               src="/images/work/harvester-alert.webp"
               alt="Vehicle alert card over a satellite map, warning of low rear tire pressure on a harvester"
@@ -59,7 +44,7 @@
               height="508"
             />
           </a>
-          <a href="#" class="tile tile--pattern">
+          <a href="/work/sample-project/" class="tile tile--pattern">
             <img
               src="/images/work/pixel-pattern.webp"
               alt="Pixel pattern of keys with arrow symbols and a diagonal run of orange and pink keys"
@@ -67,7 +52,7 @@
               height="508"
             />
           </a>
-          <a href="#" class="tile tile--simulation">
+          <a href="/work/sample-project/" class="tile tile--simulation">
             <img
               src="/images/work/team-simulation.png"
               alt="Team simulation screen listing required skills beside a radar chart on a dark background"
@@ -77,6 +62,162 @@
           </a>
         </div>
       </section>
+
+      <section class="client-row container" aria-label="Clients">
+        <p class="client-row__label">Trusted by product teams at</p>
+        <ul>
+          <li>[Client]</li>
+          <li>[Client]</li>
+          <li>[Client]</li>
+          <li>[Client]</li>
+          <li>[Client]</li>
+          <li>[Client]</li>
+        </ul>
+      </section>
+
+      <section class="section container">
+        <div class="section-head">
+          <h2><span class="slate">Products that fit how you work,</span> not the other way around.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>Create</h3>
+            <p>Take a new product from idea to launch, with a design architecture ready to grow from day one.</p>
+            <ul>
+              <li>Product strategy and scope</li>
+              <li>UX and interface design</li>
+              <li>Composable design system</li>
+            </ul>
+          </article>
+          <article class="feature">
+            <h3>Adapt</h3>
+            <p>Make the product you already have ready for AI agents, new markets and new workflows, without starting over.</p>
+            <ul>
+              <li>Product and workflow audit</li>
+              <li>Agent-ready structure and content</li>
+              <li>Integration with your team</li>
+            </ul>
+          </article>
+          <article class="feature">
+            <h3>Redesign</h3>
+            <p>Replace a product that has outgrown itself with one that is clearer to use and faster to change.</p>
+            <ul>
+              <li>User research and testing</li>
+              <li>Experience redesign</li>
+              <li>Phased rollout planning</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container" aria-label="Results">
+        <div class="stats">
+          <div class="stat"><strong>[00+]</strong><span>Products shipped</span></div>
+          <div class="stat"><strong>[00%]</strong><span>Average improvement in [key metric]</span></div>
+          <div class="stat"><strong>[00]</strong><span>Weeks from kickoff to first release</span></div>
+          <div class="stat"><strong>[00%]</strong><span>Clients who come back</span></div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-head">
+          <h2><span class="slate">One clear process,</span> from first call to long after launch.</h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__number">01</span>
+            <h3>Diagnose</h3>
+            <p>We review your product, goals and constraints, then send back a clear view of what to do first.</p>
+          </li>
+          <li class="step">
+            <span class="step__number">02</span>
+            <h3>Architect</h3>
+            <p>We map how your company works and turn it into a modular structure for the product.</p>
+          </li>
+          <li class="step">
+            <span class="step__number">03</span>
+            <h3>Design and build</h3>
+            <p>We work in short cycles with your team and test with real users before each release.</p>
+          </li>
+          <li class="step">
+            <span class="step__number">04</span>
+            <h3>Scale</h3>
+            <p>We hand over everything your team needs, and stay available as the product grows.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section container">
+        <div class="section-head">
+          <h2><span class="slate">Selected work,</span> measured by results.</h2>
+          <a href="/work/" class="text-link">See all work</a>
+        </div>
+        <ul class="card-grid">
+          <li>
+            <a href="/work/sample-project/" class="work-card">
+              <div class="placeholder">Image placeholder</div>
+              <p class="work-card__meta">Product · [Industry]</p>
+              <h3>[Project name]</h3>
+              <p>[One line on the measurable result for this client.]</p>
+            </a>
+          </li>
+          <li>
+            <a href="/work/sample-project/" class="work-card">
+              <div class="placeholder">Image placeholder</div>
+              <p class="work-card__meta">Platform · [Industry]</p>
+              <h3>[Project name]</h3>
+              <p>[One line on the measurable result for this client.]</p>
+            </a>
+          </li>
+          <li>
+            <a href="/work/sample-project/" class="work-card">
+              <div class="placeholder">Image placeholder</div>
+              <p class="work-card__meta">Brand · [Industry]</p>
+              <h3>[Project name]</h3>
+              <p>[One line on the measurable result for this client.]</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section container" aria-label="Client testimonial">
+        <figure class="quote">
+          <blockquote>[Client quote: the problem they had, what changed after working with VK, and a specific result.]</blockquote>
+          <figcaption>[Client name], [Role], [Company]</figcaption>
+        </figure>
+      </section>
+
+      <section class="section container">
+        <div class="faq">
+          <h2><span class="slate">Questions</span> we hear most.</h2>
+          <div>
+            <details open>
+              <summary>What does agent-ready mean?</summary>
+              <p>Your product is structured so AI agents can understand and use it as reliably as people can. That covers clear data, consistent components and well-defined actions.</p>
+            </details>
+            <details>
+              <summary>What is included in the free diagnostic?</summary>
+              <p>We review your product and goals, then send you a short summary of what is working, what is holding you back and what we would do first. There is no obligation to continue.</p>
+            </details>
+            <details>
+              <summary>How long does a project take?</summary>
+              <p>Most projects take [00] to [00] weeks, depending on scope. We share a clear timeline after the diagnostic, before any work starts.</p>
+            </details>
+            <details>
+              <summary>How much does it cost?</summary>
+              <p>Projects usually start from [amount]. Once we understand your scope, we send a fixed proposal so there are no surprises.</p>
+            </details>
+            <details>
+              <summary>Can you work with our existing team?</summary>
+              <p>Yes. We can lead the work or join your designers and engineers, and we hand over everything so your team can continue without us.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- @include cta -->
     </main>
+
+    <!-- @include footer -->
   </body>
 </html>

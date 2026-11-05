@@ -1,0 +1,68 @@
+<footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="/" aria-label="VK home"><img src="/vk-logo.webp" alt="VK" width="2000" height="990" /></a>
+            <p>Agent-ready product ecosystems, designed by people.</p>
+          </div>
+          <div>
+            <h2 class="footer__label">Explore</h2>
+            <ul class="footer__list">
+              <li><a href="/work/">Work</a></li>
+              <li><a href="/about/">About</a></li>
+              <li><a href="/thinking/">Our Thinking</a></li>
+              <li><a href="/contact/">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__label">Legal</h2>
+            <ul class="footer__list">
+              <li><a href="/privacy/">Privacy Policy</a></li>
+              <li><a href="/terms/">Terms of Use</a></li>
+              <li><button type="button" class="footer__link-button" data-cookie-settings>Cookie settings</button></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__label">Contact</h2>
+            <address class="footer__address">
+              <a href="mailto:hello@example.com">hello@example.com</a><br />
+              [Phone number]<br /><br />
+              [Street address]<br />
+              [City], [Postcode]<br />
+              [Country]
+            </address>
+          </div>
+        </div>
+        <p class="footer__legal">&copy; 2026 [Legal company name]. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <section class="cookie" id="cookie-banner" role="dialog" aria-modal="false" aria-labelledby="cookie-title" hidden>
+      <h2 class="cookie__title" id="cookie-title">Your privacy choices</h2>
+      <p class="cookie__text">
+        We use essential storage to run this site. With your permission, we would also use analytics and marketing
+        cookies. Read our <a href="/privacy/#cookies">privacy policy</a>.
+      </p>
+      <form class="cookie__prefs" id="cookie-prefs" hidden>
+        <label class="cookie__option">
+          <input type="checkbox" checked disabled />
+          <span><strong>Essential</strong> Always on. Needed for the site to work.</span>
+        </label>
+        <label class="cookie__option">
+          <input type="checkbox" name="analytics" />
+          <span><strong>Analytics</strong> Helps us understand how the site is used.</span>
+        </label>
+        <label class="cookie__option">
+          <input type="checkbox" name="marketing" />
+          <span><strong>Marketing</strong> Helps us measure our campaigns.</span>
+        </label>
+      </form>
+      <div class="cookie__actions">
+        <button type="button" class="btn btn--primary btn--small" data-cookie-accept>Accept all</button>
+        <button type="button" class="btn btn--primary btn--small" data-cookie-reject>Reject all</button>
+        <button type="button" class="btn btn--outline btn--small" data-cookie-manage>Manage</button>
+        <button type="button" class="btn btn--outline btn--small" data-cookie-save hidden>Save choices</button>
+      </div>
+    </section>
+
+    <script type="module" src="/src/scripts/main.js"></script>
