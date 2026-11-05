@@ -136,7 +136,7 @@
   position: relative;
   aspect-ratio: 2000 / 1119;
   overflow: hidden;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-default);
   background-color: var(--color-surface-paper);
   background-position: center;
   background-size: cover;

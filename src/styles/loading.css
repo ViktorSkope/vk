@@ -39,7 +39,7 @@
 /* Skeletons */
 
 .skeleton {
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-default);
   background: var(--color-surface-paper);
   animation: shimmer 1.2s ease-in-out infinite;
 }
@@ -47,7 +47,7 @@
 .skeleton--media {
   aspect-ratio: 4 / 3;
   margin-bottom: var(--spacing-base);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-default);
 }
 
 .skeleton--line {

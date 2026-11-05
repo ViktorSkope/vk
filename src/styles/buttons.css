@@ -6,7 +6,7 @@
   height: 44px;
   padding: 0 var(--spacing-lg);
   border: 1px solid transparent;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-default);
   background: transparent;
   font-family: inherit;
   font-size: var(--text-button);
@@ -55,7 +55,7 @@
 .btn--small {
   height: 38px;
   padding: 0 var(--spacing-base);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-default);
 }
 
 .btn[aria-busy="true"] {

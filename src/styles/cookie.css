@@ -10,7 +10,7 @@
   padding: var(--spacing-lg);
   overflow-y: auto;
   border: 1px solid var(--color-hairline);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-default);
   background: var(--color-surface-card);
   box-shadow: 0 8px 32px rgb(15 21 29 / 0.12);
 }

@@ -21,7 +21,7 @@
   gap: 0.03em;
   margin-left: 0.14em;
   padding: 0.06em;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-default);
   background: var(--color-surface-paper);
   vertical-align: middle;
 }

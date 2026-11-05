@@ -1,5 +1,5 @@
 # VK — Style Reference
-> A product design studio whose site reads like a calm editorial page interrupted by loud pixel art. A warm off-white canvas (`#f5f3f1`) holds cool blue-black ink (`#0f151d`). Headlines are set in a bookish serif and split into two tones: slate for the setup, ink for the payoff. The interface stays quiet and neutral, with rectangular soft-cornered buttons and no decoration, so that all the colour comes from the work: saturated pixel characters, pixel patterns and real product screens, shown in a tight mosaic of tiles.
+> A product design studio whose site reads like a calm editorial page interrupted by loud pixel art. A warm off-white canvas (`#f5f3f1`) holds cool blue-black ink (`#0f151d`). Headlines are set in a bookish serif and split into two tones: slate for the setup, ink for the payoff. The interface stays quiet and neutral, with rectangular buttons, small 4px corners and no decoration, so that all the colour comes from the work: saturated pixel characters, pixel patterns and real product screens, shown in a tight mosaic of tiles.
 
 **Theme:** light
 
@@ -118,11 +118,10 @@ The hero headline is one sentence in two colours: the setup in `--color-slate`, 
 | Name | Value | Token | Use |
 |---|---|---|---|
 | none | 0px | `--radius-none` | Pixel art edges |
-| sm | 8px | `--radius-sm` | Nav button |
-| md | 12px | `--radius-md` | Hero buttons, tiles, chips |
+| default | 4px | `--radius-default` | Everything rounded: buttons, tiles, cards, inputs, chips, banners |
 | full | 9999px | `--radius-full` | Avatars only |
 
-Buttons are never pills.
+4px is the only corner radius. Circles are for avatars, and buttons are never pills. Image files should not have rounded corners built in, because they would show through a 4px tile.
 
 ### Layout
 
@@ -143,13 +142,13 @@ Buttons are never pills.
 ### button primary
 - **background:** `{colors.primary}`, hover `{colors.primary-hover}`
 - **text:** `{colors.on-primary}`, `{typography.button}`
-- **rounded:** `{rounded.md}`
+- **rounded:** `{rounded.default}`
 - **height:** 44px
 - **padding:** 0 24px
 
 ### button primary small
 - Same as button primary, for the nav
-- **rounded:** `{rounded.sm}`
+- **rounded:** `{rounded.default}`
 - **height:** 38px
 - **padding:** 0 16px
 
@@ -157,7 +156,7 @@ Buttons are never pills.
 - **background:** transparent
 - **border:** 1px solid `{colors.ink}`
 - **text:** `{colors.ink}`, `{typography.button}`
-- **rounded:** `{rounded.md}`
+- **rounded:** `{rounded.default}`
 - **height:** 44px
 - **padding:** 0 24px
 
@@ -172,7 +171,7 @@ Buttons are never pills.
 ### avatar chip
 - Sits inline at the end of a headline
 - **background:** `{colors.surface-paper}`
-- **rounded:** `{rounded.md}`
+- **rounded:** `{rounded.default}`
 - **padding:** 4px
 - **contents:** three 50px circular portraits on avatar blue, orange and green, with a 2px gap
 
@@ -184,7 +183,7 @@ Buttons are never pills.
 - **Row height:** about 265px each
 
 ### image tile
-- **rounded:** `{rounded.md}`
+- **rounded:** `{rounded.default}`
 - **overflow:** hidden, with no border or shadow
 - **background:** matches the image's own background, so artwork blends into the tile
 
@@ -193,14 +192,14 @@ These were designed to extend the home page style across the full site.
 
 - **section heading:** `{typography.display-xl}`, two-tone. `{typography.display-lg}` on phones
 - **interior page hero:** centred, `{typography.display-mega}`, two-tone. Legal pages and articles use `{typography.display-xl}`
-- **feature tile:** `{colors.surface-paper}` fill, `{rounded.md}`, 32px padding, `{typography.heading-md}` title
+- **feature tile:** `{colors.surface-paper}` fill, `{rounded.default}`, 32px padding, `{typography.heading-md}` title
 - **stat:** 1px `{colors.hairline}` top rule, `{typography.heading-xl}` value, `{typography.caption}` label in `{colors.muted}`
 - **process step:** 1px `{colors.ink}` top rule, numbered, `{typography.title-md}` title
-- **testimonial:** `{colors.surface-paper}` fill, `{rounded.md}`, `{typography.heading-lg}` quote
+- **testimonial:** `{colors.surface-paper}` fill, `{rounded.default}`, `{typography.heading-lg}` quote
 - **FAQ:** native disclosure rows split by `{colors.hairline}`, `{typography.title-sm}` question
-- **CTA band:** `{colors.surface-dark}` fill, `{rounded.md}`, `{typography.display-xl}`, with white filled and white outline buttons
-- **image placeholder:** `{colors.surface-paper}` fill or `{colors.surface-dark}` for dark images, `{rounded.md}`, caption text
-- **text input:** `{colors.surface-card}` fill, 1px `{colors.hairline}` border, `{rounded.md}`, at least 44px tall. Errors use `{colors.semantic-error}`
+- **CTA band:** `{colors.surface-dark}` fill, `{rounded.default}`, `{typography.display-xl}`, with white filled and white outline buttons
+- **image placeholder:** `{colors.surface-paper}` fill or `{colors.surface-dark}` for dark images, `{rounded.default}`, caption text
+- **text input:** `{colors.surface-card}` fill, 1px `{colors.hairline}` border, `{rounded.default}`, at least 44px tall. Errors use `{colors.semantic-error}`
 - **cookie banner:** `{colors.surface-card}` fill, fixed to the lower right. Accept and Reject must have the same size and style
 - **footer:** `{colors.canvas}` fill, 1px `{colors.hairline}` top rule, `{colors.body}` text, `{typography.body-sm}`
 
@@ -265,8 +264,8 @@ The mockup is desktop only, so this section is derived.
 | Ink | Warm `#0c0a09` | Cool `#0f151d` |
 | Display type | Licensed face, weight 300 | Source Serif 4, weight 400, -2% spacing, two-tone, big titles only |
 | UI type | Inter | Work Sans |
-| Buttons | Pills, 40px | Soft rectangles, 44px and 38px |
+| Buttons | Pills, 40px | Rectangles with 4px corners, 44px and 38px |
 | Colour source | Pastel gradient orbs | Pixel art and product imagery |
-| Card radius | 16 to 24px | 12px |
+| Corner radius | 16 to 24px, and pills | 4px |
 | Max width | 1200px | 1412px |
 | Removed | Voice rows, waveform cards, pricing cards, testimonial cards | Not relevant to VK |

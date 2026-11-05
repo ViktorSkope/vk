@@ -64,7 +64,7 @@
 
 .notice {
   padding: var(--spacing-base) var(--spacing-md);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-default);
   background: var(--color-surface-paper);
   color: var(--color-ink);
   font-size: var(--text-body-sm);

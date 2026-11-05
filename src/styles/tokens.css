@@ -67,8 +67,7 @@
   --spacing-xxl: 40px;
   --spacing-section: 144px;
   --radius-none: 0px;
-  --radius-sm: 8px;
-  --radius-md: 12px;
+  --radius-default: 4px;
   --radius-full: 9999px;
   --content-width: 1412px;
   --page-margin: var(--spacing-xxl);
