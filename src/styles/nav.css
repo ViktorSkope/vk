@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px;
+  padding-inline: var(--page-margin);
+}
+
+.nav__logo img {
+  width: auto;
+  height: 22px;
+}
+
+.nav__links {
+  display: flex;
+  gap: 72px;
+  font-size: var(--text-nav-link);
+  line-height: var(--leading-nav-link);
+}
+
+.nav__links a:hover {
+  color: var(--color-muted);
+}
+
+@media (max-width: 760px) {
+  .nav__links {
+    display: none;
+  }
+}
