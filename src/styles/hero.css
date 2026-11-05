@@ -3,15 +3,15 @@
   text-align: center;
 }
 
+/* Two lines: the setup, then the payoff. Scales with the window so the setup never wraps above phone width */
 .hero__title {
-  max-width: 820px;
-  margin-inline: auto;
-  font-size: var(--text-display-mega);
+  font-size: min(var(--text-display-mega), 5.5vw);
   font-weight: 400;
   line-height: var(--leading-display-mega);
 }
 
 .hero__title-setup {
+  display: block;
   color: var(--color-slate);
 }
 
@@ -46,8 +46,7 @@
   }
 
   .hero__title {
-    max-width: 620px;
-    font-size: var(--text-display-xl);
+    font-size: min(var(--text-display-xl), 5.5vw);
     line-height: var(--leading-display-xl);
   }
 }

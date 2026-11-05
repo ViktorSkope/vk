@@ -4,6 +4,7 @@ import { initImageLoading, initPageProgress, initLoadMore } from "./loading.js";
 import { initWorkFilter } from "./work-filter.js";
 import { initContactForm } from "./contact-form.js";
 import { initMedia } from "./media.js";
+import { initTypewriter } from "./typewriter.js";
 
 initNav();
 initCookieConsent();
@@ -13,3 +14,4 @@ initLoadMore();
 initWorkFilter();
 initContactForm();
 initMedia();
+initTypewriter();

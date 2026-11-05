@@ -28,12 +28,12 @@
 
       <section class="mosaic container" aria-label="Selected work">
         <div class="mosaic__grid">
-          <a href="/work/sample-project/" class="tile tile--characters">
+          <a href="/work/ingrid/" class="tile tile--fleet">
             <img
-              src="/images/work/pixel-characters.png"
-              alt="Four pixel-art characters with eyes: a heart, a star, a pushpin and a rounded blob"
-              width="1098"
-              height="1062"
+              src="/images/work/ingrid-fleet-map.webp"
+              alt="Ingrid case study: a fleet list of mining trucks beside a satellite map, with a status card open for truck HT-02"
+              width="1290"
+              height="1290"
             />
           </a>
           <a
@@ -46,21 +46,75 @@
               <source src="/videos/ingrid-truck-card.mp4" type="video/mp4" />
             </video>
           </a>
-          <a href="/work/sample-project/" class="tile tile--pattern">
-            <img
-              src="/images/work/pixel-pattern.webp"
-              alt="Pixel pattern of keys with arrow symbols and a diagonal run of orange and pink keys"
-              width="498"
-              height="498"
-            />
+          <a href="/work/ingrid/" class="tile tile--brand" aria-label="Ingrid case study">
+            <video data-autoplay muted loop playsinline preload="none" poster="/images/work/ingrid-light-rails-poster.webp" width="712" height="480" aria-hidden="true">
+              <source src="/videos/ingrid-light-rails.webm" type="video/webm" />
+              <source src="/videos/ingrid-light-rails.mp4" type="video/mp4" />
+            </video>
+            <img class="tile__logo" src="/images/work/ingrid-logo-white.webp" alt="" width="537" height="170" />
           </a>
-          <a href="/work/sample-project/" class="tile tile--simulation">
-            <img
-              src="/images/work/team-simulation.png"
-              alt="Team simulation screen listing required skills beside a radar chart on a dark background"
-              width="1568"
-              height="508"
-            />
+          <a
+            href="/work/ingrid/"
+            class="tile tile--crd"
+            aria-label="Ingrid case study: the Ingrid design system being written line by line, with colour codes lighting up as they are typed"
+          >
+<pre class="typewriter" data-typewriter aria-hidden="true"># Ingrid · Design System
+
+The central reference for how Ingrid looks, moves and reads.
+
+## 1. Identity and feel
+
+**The feel in one line.** A quiet, light, hairline-drawn control room wrapped around a dark satellite map, where color is rare and always means something.
+
+**Five words.** Calm. Precise. Operational. Dense-but-airy. Honest.
+
+## 2. Principles and hard rules
+
+- Use only CSS variables for color in UI chrome.
+- Fonts: Geist (400, 500) and Geist Mono (400).
+- Radius is `var(--radius)` (4px).
+- Numbers use `font-variant-numeric: tabular-nums` and the mono face.
+- Respect `prefers-reduced-motion`.
+
+## 3. Color
+
+| Token | Value | Use |
+|---|---|---|
+| `--page` | `#f7f7f6` | App background, sidebar, panels, detail card |
+| `--ink` | `#191919` | Primary text and icons |
+| `--accent` | `#FDB700` | Brand yellow |
+| `--ok` | `#1f9d55` | Healthy, online, positive delta |
+| `--del` | `#d1453b` | Critical, destructive, error, limit |
+| `--blue` | `#2f6fec` | Focus ring, live dot, "to pit" legs |
+| `--purple` | `#7c5cd6` | Maintenance and service state |
+| `--map` | `#1a1d1b` | Map canvas background behind tiles |
+
+### 3.5 Road (leg) colors
+
+| `--leg1` | `#4f8dff` | To pit (patio → pit), all three pits |
+| `--leg2` | `#f0b429` | Haul N4 (pit ↔ crusher) |
+| `--leg3` | `#a78bfa` | Maintenance (crusher → patio) |
+| `--leg4` | `#2dd4bf` | Haul N4W |
+| `--leg5` | `#f472b6` | Haul N5 |
+
+## 7. Motion
+
+```css
+--ease-enter: cubic-bezier(.16, 1, .3, 1);   /* things arrive easing out */
+--ease-exit:  cubic-bezier(.4, 0, 1, 1);     /* things leave easing in */
+--t-pop: 200ms;  --t-pop-out: 160ms;         /* dropdowns, popovers, drawer */
+--t-panel: 220ms; --t-panel-out: 176ms;      /* docked panels, detail, export */
+```
+
+**The rule:** every exit is 20% shorter than its entrance.
+
+## 13. Writing and copy
+
+Short, literal, operational. Say what is happening and what the person can do.
+
+- **Buttons are verb phrases:** Send to maintenance, Keep running, Show on map.
+- **IDs and names:** trucks `HT-01`…`HT-06`; pits `N4`, `N4W`, `N5`.
+- **Numbers carry units** (`t`, `km/h`, `min`, `s`, `%`, `m`).</pre>
           </a>
         </div>
       </section>

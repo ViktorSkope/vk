@@ -11,6 +11,7 @@
   --color-surface-paper: #ebe8e1;
   --color-surface-card: #ffffff;
   --color-surface-dark: #0f151d;
+  --color-surface-map: #1a1d1b;
   --color-on-primary: #ffffff;
   --color-pixel-red: #fd2405;
   --color-pixel-orange: #fd8905;
@@ -30,6 +31,7 @@
   --color-semantic-success: #0a8941;
   --font-display: 'Source Serif 4', Georgia, serif;
   --font-ui: 'Work Sans', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, Consolas, monospace;
   --tracking-display: -0.02em;
   --text-display-mega: 70px;
   --leading-display-mega: 1.08;

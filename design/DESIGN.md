@@ -24,6 +24,7 @@ Each value below is marked **measured** (sampled from the mockup or assets) or *
 | surface paper | `#ebe8e1` | `--color-surface-paper` | measured | Tiles and chips. Matches the background baked into the pixel art |
 | surface card | `#ffffff` | `--color-surface-card` | measured | Cards on a dark frame |
 | surface dark | `#0f151d` | `--color-surface-dark` | measured | Dark tile frame. Matches the background baked into the product shots |
+| surface map | `#1a1d1b` | `--color-surface-map` | measured | Typing tile. Ingrid's dark map colour |
 | on primary | `#ffffff` | `--color-on-primary` | measured | Text on ink |
 
 ### Pixel palette
@@ -72,6 +73,11 @@ Both families are the closest free matches found by comparing candidates against
 ### 'Work Sans', system-ui, sans-serif · `--font-ui`
 - **Weights:** 400, 500
 - **Role:** The default for everything else, including card titles, testimonials, stats, article titles and subheadings
+
+### 'Geist Mono', ui-monospace, Consolas, monospace · `--font-mono`
+
+- **Weight:** 400
+- **Role:** Typed code and documents inside work tiles only, never for site interface text
 
 ### Type Scale
 
@@ -128,7 +134,7 @@ The hero headline is one sentence in two colours: the setup in `--color-slate`, 
 - **Max content width:** 1412px, centred
 - **Nav height:** 88px, with 40px side margins
 - **Hero:** centred text, with 123px between the nav and the headline, and 40px between headline and buttons
-- **Hero to mosaic:** 144px
+- **Hero to mosaic:** 40px
 - **Tile gap:** 16px. The mockup uses about 16px between columns and 22px between rows; this system uses one value for both
 
 ## Components
@@ -165,7 +171,7 @@ The hero headline is one sentence in two colours: the setup in `--color-slate`, 
 
 ### hero headline
 - **typography:** `{typography.display-mega}`
-- **max width:** about 820px, centred
+- **layout:** centred, on two lines: the setup, then the payoff. It only wraps further on phones
 - **colour:** two-tone, as described above
 
 ### avatar chip
@@ -186,6 +192,16 @@ The hero headline is one sentence in two colours: the setup in `--color-slate`, 
 - **rounded:** `{rounded.default}`
 - **overflow:** hidden, with no border or shadow
 - **background:** matches the image's own background, so artwork blends into the tile
+
+### brand tile
+- A muted looping recording on a dark tile, with the client's white logo centred on top at 52% of the tile width
+- The logo is a separate image, so it stays sharp at any tile size
+
+### typing tile
+- A document typed line by line in Geist Mono, 13px (12px on phones), on `{colors.surface-map}`. The view scrolls to follow the caret, then the tile fades and starts again
+- Tokens turn blue when finished. Colour codes take their own colour when finished, gain a small swatch and recolour their token. A colour too dark to read keeps the light text
+- Text and syntax colours belong to the project being shown, so they live with the tile and are not VK tokens
+- Typing pauses off screen. People who prefer reduced motion see the finished text, with no caret or scrolling
 
 ### Site components, beyond the mockup (derived)
 These were designed to extend the home page style across the full site.
