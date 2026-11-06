@@ -185,3 +185,10 @@
 .case-gallery .media-stage {
   margin-bottom: 0;
 }
+
+.case-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-default);
+}
