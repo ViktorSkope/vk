@@ -154,6 +154,10 @@
   background-image: url("/images/work/ingrid-backdrop.webp");
 }
 
+.media-stage--watchson {
+  background-image: url("/images/work/watchson-backdrop.webp");
+}
+
 /* Small stages give the window more of the frame so the product stays readable */
 .media-stage--card {
   aspect-ratio: 4 / 3;
@@ -176,4 +180,8 @@
     left: 8%;
     width: 84%;
   }
+}
+
+.case-gallery .media-stage {
+  margin-bottom: 0;
 }
