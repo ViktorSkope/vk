@@ -49,13 +49,18 @@ h2 {
   font-weight: 400;
 }
 
-/* The only place the serif is set: page titles, big section titles and the closing CTA */
+/* Set per element, because an em value would otherwise inherit as a fixed size. Zero specificity, so other rules win */
+:where(body, body *) {
+  letter-spacing: var(--tracking-ui);
+}
+
+/* Display style: page titles, big section titles and the closing CTA */
 h1,
 .section-head h2,
 .faq h2,
-.cta-band h2 {
+.cta-band h2,
+:is(h1, .section-head h2, .faq h2, .cta-band h2) * {
   font-family: var(--font-display);
-  font-optical-sizing: none;
   letter-spacing: var(--tracking-display);
 }
 

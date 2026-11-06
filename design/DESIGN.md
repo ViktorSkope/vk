@@ -1,5 +1,5 @@
 # VK — Style Reference
-> A product design studio whose site reads like a calm editorial page interrupted by loud pixel art. A warm off-white canvas (`#f5f3f1`) holds cool blue-black ink (`#0f151d`). Headlines are set in a bookish serif and split into two tones: slate for the setup, ink for the payoff. The interface stays quiet and neutral, with rectangular buttons, small 4px corners and no decoration, so that all the colour comes from the work: saturated pixel characters, pixel patterns and real product screens, shown in a tight mosaic of tiles.
+> A product design studio whose site reads like a calm editorial page interrupted by loud pixel art. A warm off-white canvas (`#f5f3f1`) holds cool blue-black ink (`#0f151d`). Headlines are set in Instrument Sans and split into two tones: slate for the setup, ink for the payoff. The interface stays quiet and neutral, with rectangular buttons, small 4px corners and no decoration, so that all the colour comes from the work: saturated pixel characters, pixel patterns and real product screens, shown in a tight mosaic of tiles.
 
 **Theme:** light
 
@@ -62,16 +62,16 @@ Accent colours live in the artwork. Use them in pixel art and avatars, and not f
 
 ## Tokens — Typography
 
-Both families are the closest free matches found by comparing candidates against the mockup. They are not confirmed as the mockup's original fonts.
+Instrument Sans is the one typeface for headlines and interface text.
 
-### 'Source Serif 4', Georgia, serif · `--font-display`
+### 'Instrument Sans', system-ui, sans-serif · `--font-display`
 - **Weight:** 400
-- **Optical sizing:** turn off with `font-optical-sizing: none`. The automatic display cut is much narrower and more contrasted than the mockup
-- **Letter spacing:** -2% (`--tracking-display`), on every serif title
-- **Role:** Big, important titles only: page titles, section titles and the closing call to action. Everything smaller uses Work Sans
+- **Letter spacing:** -5% (`--tracking-display`), on every display title
+- **Role:** Big, important titles only: page titles, section titles and the closing call to action. Everything smaller uses the UI style
 
-### 'Work Sans', system-ui, sans-serif · `--font-ui`
+### 'Instrument Sans', system-ui, sans-serif · `--font-ui`
 - **Weights:** 400, 500
+- **Letter spacing:** -2% (`--tracking-ui`)
 - **Role:** The default for everything else, including card titles, testimonials, stats, article titles and subheadings
 
 ### 'Geist Mono', ui-monospace, Consolas, monospace · `--font-mono`
@@ -133,7 +133,7 @@ The hero headline is one sentence in two colours: the setup in `--color-slate`, 
 
 - **Max content width:** 1412px, centred
 - **Nav height:** 88px, with 40px side margins
-- **Hero:** centred text, with 123px between the nav and the headline, and 40px between headline and buttons
+- **Hero:** centred text, with 123px between the nav and the headline, 24px between headline and lead, and 32px between lead and buttons
 - **Hero to mosaic:** 40px
 - **Tile gap:** 16px. The mockup uses about 16px between columns and 22px between rows; this system uses one value for both
 
@@ -173,6 +173,10 @@ The hero headline is one sentence in two colours: the setup in `--color-slate`, 
 - **typography:** `{typography.display-mega}`
 - **layout:** centred, on two lines: the setup, then the payoff. It only wraps further on phones
 - **colour:** two-tone, as described above
+
+### hero lead
+- One centred sentence under the headline saying what VK does, at most 560px wide with balanced lines
+- **typography:** `{typography.title-md}` in `{colors.muted}`, `{typography.body-md}` on phones
 
 ### avatar chip
 - Sits inline at the end of a headline
@@ -255,7 +259,7 @@ Show a recording inset over a full-bleed backdrop chosen for the project, with n
 - Split hero headlines into slate and ink.
 - Match tile backgrounds to the image's own background.
 - Mix pixel art and product screens in the mosaic.
-- Default to Work Sans, and save the serif for big, important titles.
+- Save the display style for big, important titles.
 
 ### Don't
 - Don't use pill buttons, gradient orbs or atmospheric gradients.
@@ -278,8 +282,8 @@ The mockup is desktop only, so this section is derived.
 |---|---|---|
 | Canvas | Neutral `#f5f5f5` | Warm `#f5f3f1` |
 | Ink | Warm `#0c0a09` | Cool `#0f151d` |
-| Display type | Licensed face, weight 300 | Source Serif 4, weight 400, -2% spacing, two-tone, big titles only |
-| UI type | Inter | Work Sans |
+| Display type | Licensed face, weight 300 | Instrument Sans, weight 400, -5% spacing, two-tone, big titles only |
+| UI type | Inter | Instrument Sans |
 | Buttons | Pills, 40px | Rectangles with 4px corners, 44px and 38px |
 | Colour source | Pastel gradient orbs | Pixel art and product imagery |
 | Corner radius | 16 to 24px, and pills | 4px |

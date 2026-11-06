@@ -53,6 +53,11 @@
   background: var(--color-surface-map);
 }
 
+.typewriter,
+.typewriter * {
+  letter-spacing: 0;
+}
+
 /* Colours below are Ingrid's own dark theme: this tile shows their document, not VK's interface */
 .typewriter {
   position: absolute;
