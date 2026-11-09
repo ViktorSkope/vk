@@ -114,8 +114,22 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: var(--spacing-base);
+  align-items: center;
+  row-gap: var(--spacing-xl);
   color: var(--color-muted);
   font-size: var(--text-title-md);
+}
+
+/* Logos are single colour and transparent. Each has its own height so they read at the same visual weight */
+.client-row li {
+  display: flex;
+  justify-content: center;
+}
+
+.client-row img {
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* Feature tiles */
