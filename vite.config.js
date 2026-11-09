@@ -11,6 +11,7 @@ const pages = {
   project: "work/sample-project/index.html",
   ingrid: "work/ingrid/index.html",
   watchson: "work/watchson/index.html",
+  whirl: "work/whirl/index.html",
   about: "about/index.html",
   thinking: "thinking/index.html",
   article: "thinking/sample-article/index.html",

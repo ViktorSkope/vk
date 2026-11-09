@@ -131,8 +131,41 @@ textarea:focus-visible {
   transform: none;
 }
 
+/* Pages share objects across navigation. An element keeps one view-transition-name
+   everywhere it appears (the web's version of a shared layoutId), so it moves between pages */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(*) {
+  animation-duration: var(--motion-open);
+  animation-timing-function: var(--ease-in-out);
+}
+
+::view-transition-old(root) {
+  animation-duration: var(--motion-close);
+}
+
+.nav__toggle:active,
+.filter-bar .btn:active {
+  transform: scale(var(--press-scale));
+}
+
+.nav__toggle {
+  transition: transform var(--motion-press) var(--ease-in-out);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  @view-transition {
+    navigation: none;
+  }
+
+  .btn:active:not(:disabled),
+  .nav__toggle:active {
+    transform: none;
   }
 }

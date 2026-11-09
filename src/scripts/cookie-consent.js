@@ -1,3 +1,5 @@
+import { popIn, popOut, staggerIn } from "./motion.js";
+
 const STORAGE_KEY = "vk-cookie-consent";
 
 function readConsent() {
@@ -26,11 +28,13 @@ export function initCookieConsent() {
   const prefs = document.getElementById("cookie-prefs");
   const manage = banner.querySelector("[data-cookie-manage]");
   const save = banner.querySelector("[data-cookie-save]");
+  let trigger = null;
 
   function showPrefs(show) {
     prefs.hidden = !show;
     manage.hidden = show;
     save.hidden = !show;
+    if (show) staggerIn(prefs.children);
   }
 
   function open() {
@@ -39,13 +43,16 @@ export function initCookieConsent() {
     prefs.elements.marketing.checked = Boolean(saved?.marketing);
     showPrefs(false);
     banner.hidden = false;
+    popIn(banner, { trigger, origin: "100% 100%" });
   }
 
   function decide(analytics, marketing) {
     const consent = { essential: true, analytics, marketing, decidedAt: new Date().toISOString() };
     writeConsent(consent);
     applyConsent(consent);
-    banner.hidden = true;
+    popOut(banner, { trigger, origin: "100% 100%" }).then(() => {
+      banner.hidden = true;
+    });
   }
 
   banner.querySelector("[data-cookie-accept]").addEventListener("click", () => decide(true, true));
@@ -55,6 +62,7 @@ export function initCookieConsent() {
 
   document.querySelectorAll("[data-cookie-settings]").forEach((button) => {
     button.addEventListener("click", () => {
+      trigger = button;
       open();
       banner.querySelector("[data-cookie-accept]").focus();
     });

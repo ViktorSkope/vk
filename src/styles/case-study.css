@@ -158,6 +158,14 @@
   background-image: url("/images/work/watchson-backdrop.webp");
 }
 
+/* Recordings that bring their own background fill the whole stage */
+.media-stage.media-stage--full video {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Small stages give the window more of the frame so the product stays readable */
 .media-stage--card {
   aspect-ratio: 4 / 3;

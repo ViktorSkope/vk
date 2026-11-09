@@ -72,6 +72,15 @@
   --radius-none: 0px;
   --radius-default: 4px;
   --radius-full: 9999px;
+
+  /* Motion. Exits are 20% shorter than openings */
+  --motion-open: 200ms;
+  --motion-close: 160ms;
+  --motion-stagger: 30ms;
+  --motion-press: 100ms;
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+  --press-scale: 0.97;
+  --popover-scale: 0.95;
   --content-width: 1412px;
   --page-margin: var(--spacing-xxl);
 }

@@ -5,6 +5,7 @@ import { initWorkFilter } from "./work-filter.js";
 import { initContactForm } from "./contact-form.js";
 import { initMedia } from "./media.js";
 import { initTypewriter } from "./typewriter.js";
+import { initSettle } from "./motion.js";
 
 initNav();
 initCookieConsent();
@@ -15,3 +16,4 @@ initWorkFilter();
 initContactForm();
 initMedia();
 initTypewriter();
+initSettle();

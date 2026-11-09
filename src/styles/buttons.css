@@ -13,7 +13,13 @@
   line-height: var(--leading-button);
   white-space: nowrap;
   cursor: pointer;
-  transition: background-color 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    transform var(--motion-press) var(--ease-in-out);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(var(--press-scale));
 }
 
 .btn--primary {

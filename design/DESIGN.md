@@ -251,6 +251,39 @@ Use muted, looping video instead of GIF, as WebM with an MP4 fallback and a stil
 
 Show a recording inset over a full-bleed backdrop chosen for the project, with no border or shadow on the window. The window takes 77% of the stage width, 11.8% from the top, leaving slightly more backdrop below than above. In small spaces, use a 4:3 stage with the window at 84% of the width.
 
+## Motion
+
+Motion is quick and quiet. It explains where things come from and where they go, and never decorates.
+
+| Token | Value | Use |
+|---|---|---|
+| `--motion-open` | 200ms | Dropdowns, popovers and page transitions opening |
+| `--motion-close` | 160ms | Every exit, 20% shorter than its opening |
+| `--motion-stagger` | 30ms | Delay between list rows |
+| `--motion-press` | 100ms | Button press |
+| `--ease-in-out` | cubic-bezier(0.45, 0, 0.55, 1) | All popup elements, in and out |
+| `--press-scale` | 0.97 | Buttons on press |
+| `--popover-scale` | 0.95 | Popover starting scale |
+
+### Rules
+- Popup elements ease in and ease out.
+- Dropdowns open in 200ms.
+- List rows stagger by 30ms.
+- Buttons scale to 0.97 on press.
+- Details settle like notifications: they drop into place one after another, staggered by 30ms.
+- Popovers start at 0.95 scale.
+- Popovers grow out of their trigger and shrink back into it.
+- Exits are 20% shorter than openings.
+- An object that appears on more than one page keeps the same `view-transition-name`, the web's version of a shared `layoutId`, so it moves between pages instead of being replaced.
+
+### Where it applies
+- **mobile menu:** a dropdown that grows from the menu button, with its links staggered
+- **cookie banner:** a popover that grows from the Cookie settings button, or from its own corner on first visit, and shrinks back on close. Its options stagger in
+- **work filter:** cards stagger in after each filter change
+- **case studies:** project facts and stats settle in when they come into view, and FAQ answers settle in when opened
+- **project media:** each project's recording shares `project-<name>` between its card and its case study
+- **reduced motion:** all of the above is skipped, and pages change without a transition
+
 ## Do's and Don'ts
 
 ### Do
