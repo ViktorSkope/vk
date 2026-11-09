@@ -1,3 +1,16 @@
+/* Contact block at the end of the landing page. Every "Lets Talk" lands here */
+#contact {
+  scroll-margin-top: var(--spacing-lg);
+}
+
+.contact-head {
+  padding-bottom: 0;
+}
+
+.contact-head + .contact-layout {
+  padding-top: var(--spacing-xxl);
+}
+
 .contact-layout {
   display: grid;
   grid-template-columns: 1.4fr 1fr;

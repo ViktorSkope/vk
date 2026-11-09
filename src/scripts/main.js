@@ -17,3 +17,18 @@ initContactForm();
 initMedia();
 initTypewriter();
 initSettle();
+
+// Arriving from another page's "Lets Talk" (/#contact): make sure the form is in view,
+// even when the browser skips its own jump because the page is still settling.
+function scrollToHash() {
+  if (!location.hash) return;
+  let target = null;
+  try {
+    target = document.querySelector(location.hash);
+  } catch {
+    return;
+  }
+  if (target && Math.abs(target.getBoundingClientRect().top) > 80) target.scrollIntoView({ behavior: "instant" });
+}
+if (document.readyState === "complete") scrollToHash();
+else window.addEventListener("load", scrollToHash, { once: true });
